@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+
+    <template id="custom_report_invoice_document" inherit_id="account.report_invoice_document">
+
+        <xpath expr="//div[@class='row mt32 mb32'][1]/div[1]" position="before">  
+            <div class="col-xs-2" t-if="o.name">
+                <strong>Order Confirmation Date:</strong>
+                <p t-field="o.confirmation_date"/>
+            </div> 
+        </xpath>  
+                             
+    </template>    
+</odoo>
